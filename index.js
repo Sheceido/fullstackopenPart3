@@ -6,6 +6,7 @@ const app = express();
 // takes JSON data from request, transform into js object,
 // then attaches to a 'body' property of the request object
 // before the route handler is called
+app.use(express.static('build'));
 app.use(express.json());
 
 // custom middleware
